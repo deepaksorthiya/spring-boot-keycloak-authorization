@@ -29,7 +29,7 @@
     <properties>
         <java.version>17</java.version>
         <keycloak.admin.client.version>26.0.4</keycloak.admin.client.version>
-        <keycloak.version>26.1.4</keycloak.version>
+        <keycloak.version>26.2.0</keycloak.version>
         <resteasy.version>6.2.12.Final</resteasy.version>
     </properties>
     <dependencies>
