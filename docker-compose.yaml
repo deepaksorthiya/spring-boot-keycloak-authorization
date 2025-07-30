@@ -1,7 +1,7 @@
 services:
   keycloak-server:
-    image: quay.io/keycloak/keycloak:26.2.2
-    container_name: keycloak-server-26.2.2
+    image: quay.io/keycloak/keycloak:26.3.0
+    container_name: keycloak-server-26.3.0
     command:
       - start-dev
       - --import-realm

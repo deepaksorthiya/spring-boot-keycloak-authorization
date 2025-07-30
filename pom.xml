@@ -29,7 +29,7 @@
     <properties>
         <java.version>21</java.version>
         <keycloak.admin.client.version>26.0.5</keycloak.admin.client.version>
-        <keycloak.version>26.2.5</keycloak.version>
+        <keycloak.version>26.3.0</keycloak.version>
         <resteasy.version>6.2.12.Final</resteasy.version>
     </properties>
     <dependencies>
@@ -250,6 +250,10 @@
                 <exclusion>
                     <groupId>io.opentelemetry.semconv</groupId>
                     <artifactId>opentelemetry-semconv-incubating</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>io.smallrye</groupId>
+                    <artifactId>smallrye-context-propagation</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
