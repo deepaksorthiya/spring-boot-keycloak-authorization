@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-boot-3-keycloak-authorization</artifactId>
+    <artifactId>spring-boot-keycloak-authorization</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-3-keycloak-authorization</name>
-    <description>Spring Boot 3 Keycloak Authorization Example</description>
+    <name>spring-boot-keycloak-authorization</name>
+    <description>Spring Boot Keycloak Authorization Example</description>
     <url/>
     <licenses>
         <license/>

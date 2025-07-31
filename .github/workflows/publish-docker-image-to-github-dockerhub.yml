@@ -1,8 +1,10 @@
-name: Publish a Docker image to Github and DockerHub
+#  manual docker image push using Dockerfile
+name: Publish a Docker image to Github and DockerHub Using Dockerfile
 
 on:
-  release:
-    types: [ published ]
+  #  release:
+  #    types: [ published ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,9 +17,11 @@ jobs:
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
+      DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
 
     steps:
-      - name: Checkout
+
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Login to DockerHub
@@ -38,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            deepaksorthiya/spring-boot-3-keycloak-authorization
+            ${{ env.DOCKER_USERNAME }}/${{ github.event.repository.name }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push image

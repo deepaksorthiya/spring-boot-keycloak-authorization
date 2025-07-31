@@ -1,9 +1,9 @@
-[![Java Maven Build Test](https://github.com/deepaksorthiya/spring-boot-3-keycloak-authorization/actions/workflows/maven-build.yml/badge.svg)](https://github.com/deepaksorthiya/spring-boot-3-keycloak-authorization/actions/workflows/maven-build.yml)
+[![Java Maven Build Test](https://github.com/deepaksorthiya/spring-boot-keycloak-authorization/actions/workflows/maven-build.yml/badge.svg)](https://github.com/deepaksorthiya/spring-boot-keycloak-authorization/actions/workflows/maven-build.yml)
 [![Docker Hub badge][dockerhub-badge]][dockerhub]
 
-[dockerhub-badge]: https://img.shields.io/docker/pulls/deepaksorthiya/spring-boot-3-keycloak-authorization
+[dockerhub-badge]: https://img.shields.io/docker/pulls/deepaksorthiya/spring-boot-keycloak-authorization
 
-[dockerhub]: https://hub.docker.com/repository/docker/deepaksorthiya/spring-boot-3-keycloak-authorization
+[dockerhub]: https://hub.docker.com/repository/docker/deepaksorthiya/spring-boot-keycloak-authorization
 
 ---
 
@@ -20,15 +20,15 @@ Git: 2.50.0
 Spring Boot: 3.5.4
 Maven: 3.9+
 Java: 24
-Docker Desktop: Tested on 4.41.0
+Docker Desktop: Tested on 4.43.0
 Keycloak: 26.3+
 ```
 
 ### Clone this repository:
 
 ```bash
-git clone https://github.com/deepaksorthiya/spring-boot-3-keycloak-authorization.git
-cd spring-boot-3-keycloak-authorization
+git clone https://github.com/deepaksorthiya/spring-boot-keycloak-authorization.git
+cd spring-boot-keycloak-authorization
 ```
 
 ### Build Project:
@@ -52,7 +52,7 @@ docker compose up
 OR
 
 ```bash
-java -jar .\target\spring-boot-3-keycloak-authorization-0.0.1-SNAPSHOT.jar
+java -jar .\target\spring-boot-keycloak-authorization-0.0.1-SNAPSHOT.jar
 ```
 
 ## Run using Docker(Optional):
@@ -66,13 +66,13 @@ java -jar .\target\spring-boot-3-keycloak-authorization-0.0.1-SNAPSHOT.jar
 OR
 
 ```bash
-docker build -t deepaksorthiya/spring-boot-3-keycloak-authorization:0.0.1-SNAPSHOT . 
+docker build -t deepaksorthiya/spring-boot-keycloak-authorization:0.0.1-SNAPSHOT . 
 ```
 
 ### Run Using Docker
 
 ```bash
-docker run --name spring-boot-3-keycloak-authorization -p 8080:8080 deepaksorthiya/spring-boot-3-keycloak-authorization:0.0.1-SNAPSHOT
+docker run --name spring-boot-keycloak-authorization -p 8080:8080 deepaksorthiya/spring-boot-keycloak-authorization:0.0.1-SNAPSHOT
 ```
 
 ### Testing
