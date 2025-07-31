@@ -22,6 +22,7 @@ import org.keycloak.adapters.authorization.spi.ConfigurationResolver;
 import org.keycloak.adapters.authorization.spi.HttpRequest;
 import org.keycloak.representations.adapters.config.PolicyEnforcerConfig;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -38,14 +39,19 @@ import static org.springframework.security.config.Customizer.withDefaults;
 /**
  * OAuth resource configuration.
  *
- * @author Josh Cummings
+ * @author Deepak Katariya
  */
 @Configuration
 @EnableWebSecurity
 public class OAuth2ResourceServerSecurityConfiguration {
 
-    @Value("${spring.security.oauth2.resourceserver.jwt.jwk-set-uri}")
-    String jwkSetUri;
+    private final OAuth2ResourceServerProperties resourceServerProperties;
+    @Value("${auth.server.url}")
+    private String authServerUrl;
+
+    public OAuth2ResourceServerSecurityConfiguration(OAuth2ResourceServerProperties resourceServerProperties) {
+        this.resourceServerProperties = resourceServerProperties;
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -67,6 +73,7 @@ public class OAuth2ResourceServerSecurityConfiguration {
             ObjectMapper mapper = new ObjectMapper();
             mapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
             config = mapper.readValue(getClass().getResourceAsStream("/policy-enforcer.json"), PolicyEnforcerConfig.class);
+            config.setAuthServerUrl(authServerUrl);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -80,7 +87,7 @@ public class OAuth2ResourceServerSecurityConfiguration {
 
     @Bean
     JwtDecoder jwtDecoder() {
-        return NimbusJwtDecoder.withJwkSetUri(this.jwkSetUri).build();
+        return NimbusJwtDecoder.withJwkSetUri(resourceServerProperties.getJwt().getJwkSetUri()).build();
     }
 
 }
