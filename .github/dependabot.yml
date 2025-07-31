@@ -12,6 +12,21 @@ updates:
       interval: "daily"
       time: "23:59"
       timezone: "Asia/Calcutta"
+    ignore:
+      - dependency-name: "org.keycloak:keycloak-client-registration-api"
+        update-types: [ "version-update:semver-patch" ]
+
+      - dependency-name: "org.keycloak:keycloak-services"
+        update-types: [ "version-update:semver-patch" ]
+
+      - dependency-name: "org.keycloak:keycloak-policy-enforcer"
+        update-types: [ "version-update:semver-patch" ]
+
+      - dependency-name: "org.keycloak:keycloak-admin-client"
+        update-types: [ "version-update:semver-patch" ]
+
+      - dependency-name: "org.springframework.boot:spring-boot-starter-parent"
+        update-types: [ "version-update:semver-patch" ]
   # Enable version updates for Github Action
   - package-ecosystem: "github-actions"
     directory: "/"
