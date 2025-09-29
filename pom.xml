@@ -30,7 +30,7 @@
         <java.version>24</java.version>
         <keycloak.admin.client.version>26.0.6</keycloak.admin.client.version>
         <keycloak.version>26.3.2</keycloak.version>
-        <resteasy.version>6.2.12.Final</resteasy.version>
+        <resteasy.version>7.0.0.Final</resteasy.version>
     </properties>
     <dependencies>
         <dependency>
