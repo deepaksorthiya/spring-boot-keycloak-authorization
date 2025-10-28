@@ -20,11 +20,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.logging.logback.LogbackLoggingSystemProperties;
 import org.springframework.util.ClassUtils;
 
-/**
- * OAuth resource application.
- *
- * @author Josh Cummings
- */
 @SpringBootApplication
 public class SpringBoot3KeycloakAuthorizationApplication {
 

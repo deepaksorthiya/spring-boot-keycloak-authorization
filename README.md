@@ -16,12 +16,12 @@
 ### Requirements:
 
 ```
-Git: 2.50.0
-Spring Boot: 3.5.4
+Git: 2.51.0
+Spring Boot: 3.5.7
 Maven: 3.9+
-Java: 24
-Docker Desktop: Tested on 4.43.0
-Keycloak: 26.3+
+Java: 25
+Docker Desktop: Tested on 4.48.0
+Keycloak: 26.4+
 ```
 
 ### Clone this repository:

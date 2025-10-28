@@ -51,4 +51,7 @@ updates:
       interval: "daily"
       time: "23:59"
       timezone: "Asia/Calcutta"
+    ignore:
+      - dependency-name: "keycloak/keycloak"
+        update-types: [ "version-update:semver-patch" ]
     open-pull-requests-limit: 50
