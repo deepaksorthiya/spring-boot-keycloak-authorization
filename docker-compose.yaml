@@ -1,6 +1,6 @@
 services:
   keycloak-server:
-    image: quay.io/keycloak/keycloak:26.4.2
+    image: quay.io/keycloak/keycloak:26.5.0
     container_name: keycloak-server-26.4.2
     command:
       - start-dev
