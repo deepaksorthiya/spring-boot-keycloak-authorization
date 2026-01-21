@@ -17,10 +17,10 @@
 
 ```
 Git: 2.51+
-Spring Boot: 3.5.9
+Spring Boot: 4.0.1
 Maven: 3.9+
 Java: 25
-Docker Desktop: Tested on 4.48.0
+Docker Desktop: Tested on 4.50.0
 Keycloak: 26.5+
 ```
 
