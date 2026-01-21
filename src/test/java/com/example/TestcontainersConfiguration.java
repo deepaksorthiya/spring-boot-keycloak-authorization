@@ -8,7 +8,7 @@ import org.springframework.test.context.DynamicPropertyRegistrar;
 @TestConfiguration(proxyBeanMethods = false)
 class TestcontainersConfiguration {
 
-    static String KEYCLOAK_IMAGE = "quay.io/keycloak/keycloak:26.4.2";
+    static String KEYCLOAK_IMAGE = "quay.io/keycloak/keycloak:26.5.1";
     static String realmImportFile = "/realm-import.json";
     static String realmName = "quickstart";
 
